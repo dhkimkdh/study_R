@@ -1,0 +1,22 @@
+#중첩 조건문 만들기
+#mpg데이타를 이용 total_avg변수 생성
+#total_avg변수명 바꾸자
+mpg
+head(mpg)
+
+install.packages("dplyr")
+library(dplyr)
+
+mpg
+head(mpg,10)
+mpg <- rename(mpg,total = total_avg)
+head(mpg)
+
+#합격 빈도표 생성하기
+table(mpg$test)
+#qplot 함수 올리기
+library(ggplot2)
+#빈도 그래프 생성하기
+qplot(mpg$test)
+
+#중첩 조건문 만들기
